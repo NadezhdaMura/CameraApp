@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <data>
+        <variable
+            name="activity"
+            type="com.example.cameraapp.MainActivity"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/previewView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:id="@+id/imageCaptureBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_camera"
+            tools:ignore="ContentDescription"
+            android:layout_margin="10dp"
+            android:onClick="@{() -> activity.captureImage()}"/>
+        <ImageView
+            android:id="@+id/imageCaptureBtn2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_camera_switch"
+            tools:ignore="ContentDescription"
+            android:layout_marginStart="310dp"
+            android:layout_marginBottom="10dp"
+            />
+
+    </RelativeLayout>
+
+</layout>
